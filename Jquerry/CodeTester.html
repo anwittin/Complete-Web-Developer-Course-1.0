@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning Jquerry</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+<style>
+    body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    margin:0;
+    padding:0;
+    }
+
+    #menuBar {
+    width:100%;
+    height:40px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid grey;
+    }
+    #logo {
+    padding: 5px 0 0 20px;
+    font-size: 120%;
+    font-weight: bold;
+    float:left;
+}
+    #buttonDiv {
+    float: right;
+    padding: 5px 10px 0 0;
+}
+    #runButton {
+    font-size:120%;
+}
+
+    #toggles {
+    margin: 0 auto;
+    list-style: none;
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    height: 27px;
+    padding: 0;
+    position: relative;
+    top: 5px;
+}
+    #toggles li {
+    float:left;
+    border-right: 1px solid grey;
+    padding: 5px;
+}
+    .clear {
+    clear: both;
+}
+
+    .codeContainer {
+    background-color: blue;
+    height: 100%;
+    width: 50%;
+    float:left;
+}
+    .codeContainer textarea {
+    width: 100%;
+    height: 100%;
+
+    }
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div id="menuBar">
+
+        <div id="logo">
+    Tony's Code Tester
+
+        </div>
+        <div id="buttonDiv">
+            <button id="runButton">Run</button>
+        </div>
+        <ul id="toggles">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li style="border: none;">Result</li>
+        </ul>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="codeContainer" id="htmlContainer">
+    <textarea> Example code</textarea>
+</div>
+<script>
+    var windowHeight=$(window).height();
+    var menuBarHeight=$("menuBar").height();
+    var codeContainerHeight=windowHeight-menuBarHeight;
+    $(".codeContainer").height(codeContainerHeight+"px");
+</script>
+</body>
+</html>
